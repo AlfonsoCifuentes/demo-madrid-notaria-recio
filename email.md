@@ -1,26 +1,23 @@
 # Email draft - Notaría Recio
 
 - To: jmrecio@correonotarial.org
-- Contact type: email público notarial; no localizado CEO/RRHH público
-- Subject: Notaría Recio: demo para corregir la primera impresión de la web
+- Subject: Notaría Recio: propuesta web sobria y orientada a cita
 - Proposed price: 790 EUR
 - Demo: https://demo-madrid-notaria-recio.vercel.app
 - Source: https://notariarecio.com/privacidad/
 
 Hola D. José María,
 
-He revisado la web de Notaría Recio y he preparado una demo concreta de rediseño:
+He preparado una propuesta visual para Notaría Recio:
 https://demo-madrid-notaria-recio.vercel.app
 
-El punto débil es muy claro: una notaría en Calle Goya 15, en una zona de alto valor de Madrid, no debería abrir con una sensación genérica ni con copy en inglés tipo "Can We Help You?". En trámites como compraventas, herencias, poderes o testamentos, esa primera impresión afecta a la confianza antes incluso de llamar.
+La idea no es enseñar una crítica pública de la web, sino una versión de cómo podría verse una presencia online final: servicios notariales claros, cita visible, documentación previa y una imagen más acorde con una notaría en Calle Goya.
 
-La demo que he preparado ordena los trámites principales, hace visible la cita, anticipa documentación y transmite una imagen más sobria y profesional sin complicar el trabajo diario de la notaría.
+En la web actual hay margen de mejora en tres puntos: primera impresión, claridad de los trámites y facilidad para pedir cita desde móvil. La propuesta resuelve eso con una estructura sobria, rápida y fácil de mantener.
 
-Lo dejaría adaptado y publicado por 790 EUR, pago único, sin mensualidades. Incluye versión móvil, traspaso del contenido actual, llamadas/email visibles y estructura para que cada consulta llegue mejor preparada.
+Presupuesto cerrado: 790 EUR, pago único, sin mensualidades obligatorias. Incluye adaptación de textos, versión móvil, formulario de consulta, traspaso del contenido esencial y publicación.
 
-Si le parece útil, puedo enseñársela en 10 minutos y explicarle qué cambiaría antes de ponerla en producción.
-
-Si no es el momento o prefiere que no vuelva a escribir, me lo dice y no le contacto de nuevo.
+Si le parece interesante, puedo enseñársela en 10 minutos y ajustarla al funcionamiento real de la notaría.
 
 Un cordial saludo,
 Alfonso Cifuentes

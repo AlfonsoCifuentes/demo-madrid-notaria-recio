@@ -3,265 +3,159 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo redise&ntilde;o web | Notar&iacute;a Recio Madrid</title>
-  <meta name="description" content="Demo conceptual de redise&ntilde;o web para Notar&iacute;a Recio.">
+  <title>Notaría Recio | Notaría en Madrid</title>
+  <meta name="description" content="Trámites notariales claros, cita ágil y orientación previa para que cada firma llegue bien preparada.">
   <style>
-    :root { --dark:#182033;--accent:#9b2d30;--accent2:#d9a441;--pale:#f5f2ec;--ink:#22252b; --white:#ffffff; --muted:#68717a; --line:rgba(17,24,39,.14); }
+    :root { --accent:#8b2635; --accent2:#d7a441; --dark:#172033; --pale:#f6f2ea; --ink:#111827; --muted:#64748b; --line:rgba(15,23,42,.13); --white:#fff; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--white); line-height: 1.55; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: #fff; line-height: 1.55; }
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px clamp(18px, 4vw, 56px); background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
-    .mark { display: grid; gap: 0; }
-    .mark strong { font-size: clamp(17px, 2vw, 22px); color: var(--dark); }
-    .mark span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    nav { display: flex; align-items: center; gap: 18px; color: var(--dark); font-size: 14px; }
-    .nav-cta, .button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; padding: 10px 16px; font-weight: 750; }
-    .nav-cta, .button.primary { background: var(--accent); color: #fff; }
-    .button.secondary { background: rgba(255,255,255,.14); color: #fff; border-color: rgba(255,255,255,.42); }
-    .hero { min-height: calc(100vh - 70px); display: grid; align-items: end; background-image: linear-gradient(90deg, rgba(10,16,28,.88), rgba(10,16,28,.55), rgba(10,16,28,.18)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=82'); background-size: cover; background-position: center; color: #fff; padding: clamp(48px, 9vw, 110px) clamp(18px, 4vw, 56px) clamp(34px, 7vw, 76px); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .55fr); gap: clamp(28px, 5vw, 70px); align-items: end; width: min(1180px, 100%); }
-    .eyebrow { color: var(--accent2); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { margin-bottom: 18px; max-width: 930px; font-size: clamp(42px, 7vw, 82px); line-height: .95; letter-spacing: 0; }
-    .lead { max-width: 760px; font-size: clamp(18px, 2vw, 22px); color: rgba(255,255,255,.9); }
+    h1 { max-width: 920px; font-size: clamp(39px, 7vw, 78px); line-height: .96; letter-spacing: 0; color: inherit; }
+    h2 { font-size: clamp(28px, 4vw, 52px); line-height: 1.04; letter-spacing: 0; color: var(--dark); }
+    h3 { color: var(--dark); font-size: 21px; line-height: 1.18; margin-bottom: 10px; }
+    p { color: #4b5563; }
+    .wrap { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+    .top { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 66px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: grid; gap: 1px; }
+    .brand strong { color: var(--dark); font-size: 20px; }
+    .brand span { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 18px; color: var(--dark); font-size: 14px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 8px; padding: 11px 16px; border: 1px solid transparent; font-weight: 850; }
+    .button.primary { background: var(--accent); color: #fff; }
+    .button.secondary { color: inherit; border-color: currentColor; background: transparent; }
+    .hero { min-height: calc(100vh - 66px); display: grid; align-items: center; color: #fff; background-image: linear-gradient(90deg, rgba(8,12,22,.86), rgba(8,12,22,.58), rgba(8,12,22,.18)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=82'); background-size: cover; background-position: center; padding: clamp(56px, 8vw, 96px) 0; }
+    .hero .lead { max-width: 760px; color: rgba(255,255,255,.88); font-size: clamp(18px, 2vw, 22px); }
+    .eyebrow { color: var(--accent2); font-size: 12px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .signal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; background: rgba(255,255,255,.16); }
-    .signal div { min-height: 112px; padding: 18px; background: rgba(5,10,18,.44); }
-    .signal strong { display: block; font-size: 30px; line-height: 1; color: #fff; }
-    .signal span { display: block; margin-top: 8px; color: rgba(255,255,255,.75); font-size: 13px; }
-    main section { padding: clamp(54px, 7vw, 92px) clamp(18px, 4vw, 56px); }
-    .wrap { width: min(1180px, 100%); margin: 0 auto; }
-    .section-head { display: grid; grid-template-columns: minmax(0, .82fr) minmax(280px, .5fr); gap: 28px; align-items: end; margin-bottom: 32px; }
-    h2 { color: var(--dark); font-size: clamp(30px, 4vw, 54px); line-height: 1.03; letter-spacing: 0; margin-bottom: 12px; }
-    .section-head p, .wide-text { color: #4e5963; font-size: 17px; }
-    .audit { background: var(--pale); }
-    .audit-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(280px, .6fr); gap: 28px; align-items: stretch; }
-    .audit-list, .contact-panel { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: clamp(22px, 3vw, 34px); }
-    .audit-list ul { margin: 0; padding-left: 20px; display: grid; gap: 13px; }
-    .proposal { border-left: 5px solid var(--accent); padding-left: 20px; align-self: start; }
-    .proposal strong { color: var(--dark); display: block; margin-bottom: 8px; }
-    .services-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-    .service { min-height: 242px; border: 1px solid var(--line); border-radius: 8px; padding: 22px; background: #fff; transition: transform .18s ease, border-color .18s ease; cursor: default; }
-    .service:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .service span { color: var(--accent); font-weight: 850; font-size: 13px; }
-    .service h3 { margin: 18px 0 10px; color: var(--dark); font-size: 21px; }
-    .flow { background: var(--dark); color: #fff; }
-    .flow .section-head h2, .flow h3 { color: #fff; }
-    .flow .section-head p { color: rgba(255,255,255,.74); }
-    .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-    .steps li { min-height: 172px; border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 20px; background: rgba(255,255,255,.06); }
-    .steps span { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 50%; background: var(--accent2); color: #111827; font-weight: 900; }
-    .steps p { margin: 16px 0 0; color: rgba(255,255,255,.86); }
-    .conversion { display: grid; grid-template-columns: minmax(0, .75fr) minmax(280px, .55fr); gap: 28px; align-items: center; }
-    .quote { border-top: 4px solid var(--accent2); padding: 26px; border-radius: 8px; background: var(--pale); font-size: 23px; line-height: 1.28; color: var(--dark); }
-    .contact { background: #f7f9fb; }
-    .contact-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(300px, .55fr); gap: 28px; align-items: stretch; }
-    .contact-panel dl { margin: 0; display: grid; gap: 16px; }
-    .contact-panel dt { color: var(--muted); font-size: 12px; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
-    .contact-panel dd { margin: 4px 0 0; color: var(--dark); font-weight: 760; }
-    .form-demo { display: grid; gap: 12px; }
-    .form-demo label { display: grid; gap: 6px; color: var(--dark); font-weight: 750; }
-    .form-demo input, .form-demo select, .form-demo textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; min-height: 44px; padding: 10px 12px; font: inherit; background: #fff; color: var(--ink); }
-    .form-demo textarea { min-height: 104px; resize: vertical; }
-    .notice { margin-top: 14px; font-size: 13px; color: #65717c; }
-    footer { padding: 28px clamp(18px, 4vw, 56px); border-top: 1px solid var(--line); color: #65717c; font-size: 13px; }
+    section { padding: clamp(54px, 7vw, 92px) 0; }
+    .soft { background: var(--pale); }
+    .two { display: grid; grid-template-columns: minmax(0, .9fr) minmax(300px, .58fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+    .services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+    .card { min-height: 210px; border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 22px; }
+    .card p { margin-bottom: 0; }
+    .feature-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+    .feature-list li { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px 18px; color: var(--dark); font-weight: 760; }
+    .steps { margin: 28px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .steps li { min-height: 120px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.07); color: #fff; padding: 18px; }
+    .steps span { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; align-items: center; justify-content: center; background: var(--accent2); color: #111827; font-weight: 900; margin-bottom: 14px; }
+    .dark { background: var(--dark); color: #fff; }
+    .dark h2 { color: #fff; }
+    .dark p { color: rgba(255,255,255,.78); }
+    .contact-card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 24px; }
+    .contact-card dl { margin: 0; display: grid; gap: 16px; }
+    .contact-card dt { color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-card dd { margin: 4px 0 0; color: var(--dark); font-weight: 760; overflow-wrap: anywhere; }
+    footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
     footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .style-editorial h1, .style-paper h1, .style-magazine h1, .style-dossier h1 { font-family: Georgia, "Times New Roman", serif; }
+    .style-luxury .hero { background-image: linear-gradient(90deg, rgba(23,20,22,.9), rgba(23,20,22,.52), rgba(23,20,22,.14)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=82'); }
+    .style-forensic .hero { background-image: linear-gradient(90deg, rgba(7,17,31,.96), rgba(7,17,31,.72)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=82'); }
+    .style-campus .card { border-bottom: 6px solid var(--accent); }
+    .style-minimal .button.primary { background: var(--dark); }
     @media (max-width: 900px) {
-      nav a:not(.nav-cta) { display: none; }
-      .hero { min-height: auto; padding-top: 74px; }
-      .hero-grid, .section-head, .audit-grid, .conversion, .contact-grid { grid-template-columns: 1fr; }
-      .signal, .services-grid, .steps { grid-template-columns: 1fr; }
-      h1 { font-size: clamp(38px, 13vw, 58px); }
-      .service, .steps li { min-height: auto; }
+      nav a:not(.button) { display: none; }
+      .hero { min-height: auto; }
+      .two, .services, .steps { grid-template-columns: 1fr; }
+      .card, .steps li { min-height: auto; }
+      h1 { font-size: clamp(36px, 13vw, 58px); }
     }
   </style>
 </head>
-<body>
-  <header class="topbar">
-    <a class="mark" href="#inicio" aria-label="Notar&iacute;a Recio">
-      <strong>Notar&iacute;a Recio</strong>
-      <span>notar&iacute;a · Madrid</span>
-    </a>
-    <nav aria-label="Navegaci&oacute;n principal">
-      <a href="#diagnostico">Diagn&oacute;stico</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a class="nav-cta" href="mailto:jmrecio@correonotarial.org?subject=Consulta%20desde%20la%20web">Contactar</a>
-    </nav>
+<body class="style-classic">
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#inicio"><strong>Notaría Recio</strong><span>Notaría en Madrid</span></a>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#metodo">Atención</a>
+        <a href="#contacto">Contacto</a>
+        <a class="button primary" href="tel:917812760">Llamar</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero" id="inicio">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Demo de redise&ntilde;o · Calle Goya, Plaza de Col&oacute;n y Serrano</p>
-        <h1>Una notar&iacute;a en Goya con una web a la altura de operaciones importantes</h1>
-        <p class="lead">Redise&ntilde;o orientado a convertir consultas de compraventa, herencias, poderes y testamentos en citas claras, con documentaci&oacute;n previa y rutas sin fricci&oacute;n.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="tel:917812760">Pedir cita</a>
-          <a class="button secondary" href="#servicios">Ver documentos</a>
-        </div>
+    <div class="wrap">
+      <p class="eyebrow">Madrid · Notaría en Madrid</p>
+      <h1>Seguridad jurídica y atención cercana en el barrio de Salamanca</h1>
+      <p class="lead">Trámites notariales claros, cita ágil y orientación previa para que cada firma llegue bien preparada.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="tel:917812760">Solicitar cita</a>
+        <a class="button secondary" href="#servicios">Ver servicios</a>
       </div>
-      <aside class="signal" aria-label="Se&ntilde;ales clave">
-        <div><strong>28001</strong><span>zona de alto valor</span></div>
-        <div><strong>4</strong><span>tr&aacute;mites prioritarios</span></div>
-        <div><strong>24h</strong><span>respuesta objetivo</span></div>
-      </aside>
     </div>
   </section>
 
   <main>
-    <section class="audit" id="diagnostico">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Oportunidad detectada</p>
-            <h2>La web actual no transmite el valor real de la notar&iacute;a</h2>
-          </div>
-          <p>Web activa, texto gen&eacute;rico en ingl&eacute;s y estructura muy b&aacute;sica pese a estar en una zona premium de Madrid.</p>
+    <section class="soft">
+      <div class="wrap two">
+        <div>
+          <p class="eyebrow">Quiénes somos</p>
+          <h2>Una notaría para resolver decisiones importantes con claridad</h2>
+          <p>En Notaría Recio acompañamos operaciones personales, familiares y empresariales con un trato directo y documentación bien organizada desde el primer contacto.</p>
         </div>
-        <div class="audit-grid">
-          <div class="audit-list">
-            <ul>
-              <li>El primer impacto contiene copy gen&eacute;rico en ingl&eacute;s y no explica qu&eacute; puede resolver el despacho.</li>
-<li>Los tr&aacute;mites con mayor demanda no est&aacute;n ordenados por urgencia ni por intenci&oacute;n de cita.</li>
-<li>La informaci&oacute;n de llegada y documentaci&oacute;n queda relegada, cuando es clave para reducir llamadas repetidas.</li>
-            </ul>
-          </div>
-          <div class="proposal">
-            <strong>Propuesta de mejora</strong>
-            <p>La propuesta convierte la web en una recepci&oacute;n digital: clasifica el motivo, anticipa documentos, muestra ubicaci&oacute;n y empuja a llamada o email con contexto.</p>
-          </div>
-        </div>
+        <ul class="feature-list">
+          <li>Ubicación céntrica en Calle Goya</li>
+<li>Documentación previa por email</li>
+<li>Atención para particulares y empresas</li>
+        </ul>
       </div>
     </section>
 
     <section id="servicios">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Arquitectura comercial</p>
-            <h2>Servicios ordenados para que el cliente sepa qu&eacute; hacer</h2>
-          </div>
-          <p>La p&aacute;gina no se limita a verse mejor: reduce dudas, separa intenciones y convierte visitas en contactos con informaci&oacute;n &uacute;til.</p>
-        </div>
-        <div class="services-grid">
-          
-      <article class="service" data-index="0">
-        <span>01</span>
-        <h3>Compraventa</h3>
-        <p>Checklist de DNI, nota simple, medios de pago y plazos de firma.</p>
-      </article>
-
-      <article class="service" data-index="1">
-        <span>02</span>
-        <h3>Herencias</h3>
-        <p>Gu&iacute;a de certificado de defunci&oacute;n, &uacute;ltimas voluntades y reparto de documentaci&oacute;n.</p>
-      </article>
-
-      <article class="service" data-index="2">
-        <span>03</span>
-        <h3>Poderes</h3>
-        <p>Entrada r&aacute;pida para poderes generales, mercantiles, pleitos y autorizaciones.</p>
-      </article>
-
-      <article class="service" data-index="3">
-        <span>04</span>
-        <h3>Testamentos</h3>
-        <p>Formulario simple para reservar cita y resolver dudas antes de acudir.</p>
-      </article>
+        <p class="eyebrow">Servicios</p>
+        <h2>Áreas principales de atención</h2>
+        <div class="services">
+          <article class="card"><h3>Compraventas</h3><p>Preparación de escrituras, revisión de documentación y coordinación de firma.</p></article>
+<article class="card"><h3>Herencias</h3><p>Asesoramiento en aceptación, adjudicación y documentación sucesoria.</p></article>
+<article class="card"><h3>Poderes y actas</h3><p>Poderes generales, mercantiles, notariales y autorizaciones.</p></article>
+<article class="card"><h3>Testamentos</h3><p>Orientación sencilla para dejar constancia de la voluntad con seguridad.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="flow">
+    <section class="dark" id="metodo">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Flujo de conversi&oacute;n</p>
-            <h2>Del primer vistazo a una consulta accionable</h2>
-          </div>
-          <p>Un redise&ntilde;o efectivo no fuerza llamadas sin contexto; hace que el primer contacto llegue m&aacute;s preparado.</p>
-        </div>
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Un proceso claro desde el primer contacto</h2>
+        <p>Cada consulta se atiende con información previa, orientación práctica y un siguiente paso definido.</p>
         <ol class="steps">
-          
-      <li>
-        <span>1</span>
-        <p>El usuario elige tr&aacute;mite.</p>
-      </li>
-
-      <li>
-        <span>2</span>
-        <p>La web muestra documentos y tiempos.</p>
-      </li>
-
-      <li>
-        <span>3</span>
-        <p>El formulario env&iacute;a una consulta estructurada.</p>
-      </li>
-
-      <li>
-        <span>4</span>
-        <p>El equipo responde con una cita y la lista exacta.</p>
-      </li>
+          <li><span>1</span><strong>Explique el trámite</strong></li>
+<li><span>2</span><strong>Reciba la documentación necesaria</strong></li>
+<li><span>3</span><strong>Reserve la firma</strong></li>
+<li><span>4</span><strong>Acuda con todo preparado</strong></li>
         </ol>
       </div>
     </section>
 
-    <section>
-      <div class="wrap conversion">
+    <section id="contacto">
+      <div class="wrap two">
         <div>
-          <p class="eyebrow">Tono recomendado</p>
-          <h2>Profesional, directo y orientado a cita</h2>
-          <p class="wide-text">La web propuesta evita promesas vac&iacute;as y se centra en lo que un cliente necesita antes de llamar: confianza, ubicaci&oacute;n, servicios claros, horarios y pr&oacute;ximo paso. Es una demo pensada para publicarse r&aacute;pido y adaptarse despu&eacute;s con fotos reales del equipo.</p>
-        </div>
-        <blockquote class="quote">Una notar&iacute;a no necesita una web ruidosa: necesita que el ciudadano entienda en 20 segundos si puede resolver su operaci&oacute;n all&iacute; y c&oacute;mo pedir cita.</blockquote>
-      </div>
-    </section>
-
-    <section class="contact" id="contacto">
-      <div class="wrap contact-grid">
-        <div>
-          <p class="eyebrow">Contacto principal</p>
-          <h2>Informaci&oacute;n visible sin obligar a buscar en el pie de p&aacute;gina</h2>
-          <p class="wide-text">Este bloque aprovecha los datos p&uacute;blicos actuales y prepara la web para medir llamadas, emails y formularios sin cambiar el flujo interno del negocio.</p>
-          <div class="contact-panel">
-            <dl>
-              <div><dt>Tel&eacute;fono</dt><dd><a href="tel:917812760">91 781 27 60</a></dd></div>
-              <div><dt>Email</dt><dd><a href="mailto:jmrecio@correonotarial.org">jmrecio@correonotarial.org</a></dd></div>
-              <div><dt>Direcci&oacute;n</dt><dd>Calle Goya, 15, 5&ordm; Derecha, 28001 Madrid</dd></div>
-              <div><dt>Fuente p&uacute;blica</dt><dd><a href="https://notariarecio.com/privacidad/" target="_blank" rel="noopener">Sitio web actual</a></dd></div>
-            </dl>
+          <p class="eyebrow">Contacto</p>
+          <h2>Solicite información o reserve una cita</h2>
+          <p>Puede contactar por teléfono o email para resolver dudas, preparar documentación o solicitar una primera valoración.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="tel:917812760">Llamar ahora</a>
+            <a class="button secondary" href="mailto:jmrecio@correonotarial.org">Enviar email</a>
           </div>
         </div>
-        <form class="contact-panel form-demo" aria-label="Formulario demostrativo">
-          <label>Motivo
-            <select>
-              <option>Primera consulta</option>
-              <option>Solicitud de cita</option>
-              <option>Enviar documentaci&oacute;n</option>
-              <option>Urgencia</option>
-            </select>
-          </label>
-          <label>Nombre
-            <input type="text" placeholder="Nombre y apellidos">
-          </label>
-          <label>Mensaje
-            <textarea placeholder="Resumen breve de la consulta"></textarea>
-          </label>
-          <a class="button primary" href="mailto:jmrecio@correonotarial.org?subject=Solicitud%20desde%20demo%20web">Enviar por email</a>
-          <p class="notice">Formulario demostrativo. En producci&oacute;n se conectar&iacute;a a email, CRM o agenda.</p>
-        </form>
+        <aside class="contact-card">
+          <dl>
+            <div><dt>Teléfono</dt><dd><a href="tel:917812760">91 781 27 60</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:jmrecio@correonotarial.org">jmrecio@correonotarial.org</a></dd></div>
+            <div><dt>Dirección</dt><dd>Calle Goya, 15, 5º Derecha, 28001 Madrid</dd></div>
+          </dl>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <span>Demo conceptual no oficial para propuesta de redise&ntilde;o.</span>
-      <span>Notar&iacute;a Recio · Madrid</span>
-    </div>
+    <div class="wrap"><span>© 2026 Notaría Recio</span><span>Madrid</span></div>
   </footer>
 </body>
 </html>
