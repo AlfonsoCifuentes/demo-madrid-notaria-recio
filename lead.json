@@ -12,8 +12,9 @@
   "demo_url": "https://demo-madrid-notaria-recio.vercel.app",
   "github_url": "https://github.com/AlfonsoCifuentes/demo-madrid-notaria-recio",
   "outreach_queue_id": "hermes-webdemo-20260615-001",
-  "outreach_version": "hermes-client-facing-copy-v2-20260615",
+  "outreach_version": "hermes-human-intro-v3-20260615",
   "outreach_contact_type": "email público notarial; no localizado CEO/RRHH público",
   "proposed_price": "790 EUR",
-  "website_copy_mode": "client_facing_final_site"
+  "website_copy_mode": "client_facing_final_site",
+  "outreach_tone": "human_intro"
 }
